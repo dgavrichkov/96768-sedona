@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+<head>
+	<meta charset="utf-8">
+	<title>HTML Academy: Седона</title>
+</head>
+<body>
+	<!-- Заголовок -->
+	<header class="intro">
+		<nav>
+			<img class="intro__logo" src="img/logo.png" alt="Логотип">
+			<ul class="intro__navigation">
+				<li><a>Информация</a></li>
+				<li><a>Фото и видео</a></li>
+				<li><a>Карта штата</a></li>
+				<li><a href="catalog.html">Гостиницы</a></li>
+			</ul>
+		</nav>
+		<section class="intro__title">
+			<h1 class="g--hidden">Добро пожаловать в Седону!</h1>
+			<p><img src="img/-title_welcome.png" alt="Welcome"></p>
+			<p><img src="img/-title_gorgeous.png" alt="To the gorgeous"></p>
+			<p><img src="img/-title_Sedona.png" alt="Sedona"></p>
+			<p><img src="img/-title_calligraf.png" alt="Because the Grand Canyon sucks"></p>
+		</section>
+	</header>
+	<!-- Основной контент -->
+	<main class="feature">
+		<h2 class="g--hidden">Особенности</h2>
+		<section class="feature__container">
+			<h3>Настоящий городок</h3>
+			<span>№ 1</span>
+			<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+		</section>
+		<section class="feature__container">
+			<ul class="feature__list">
+				<li>
+					<h4>Жилье</h4>
+					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+				</li>
+				<li>
+					<h4>Еда</h4>
+					<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+				</li>
+				<li>
+					<h4>Сувениры</h4>
+					<p>Не только китайского, но и местного производства!</p>
+				</li>
+			</ul>
+		</section>
+		<section class="feature__container">
+			<h3>Там есть Мост Дьявола</h3>
+			<span>№ 2</span>
+			<p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+		</section>
+		<section class="feature__container">
+			<ul class="feature__list">
+				<li>
+					<h4>Небольшая площадь</h4>
+					<span>№ 3</span>
+					<p>Все достопримечательности находятся очень близко</p>
+				</li>
+				<li>
+					<h4>Красивая дорога</h4>
+					<span>№ 4</span>
+					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+				</li>
+				<li>
+					<h4>Мало туристов</h4>
+					<span>№ 5</span>
+					<p>Большинство едет в гранд каньон и толпится там</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+	<!-- Поиск отеля -->
+	<section class="search">
+		<h2 class="g--hidden">Поиск отеля</h2>
+		<p class="search__title">
+			<b>Заинтересовались?</b>
+			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+		</p>
+		<button class="search__button">Поиск гостиницы в Седоне</button>		
+		<!-- Форма поиска, позднее -->
+		<!-- <form action="#">
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
-  </body>
+		</form> -->
+	</section>
+	<!-- Карта -->
+	<section class="map">
+		
+	</section>
+	<!-- Подвальная часть -->
+	<footer class="footer">
+		<p class="footer__tag">#VisitSedona</p>
+		<ul class="footer__social">
+			<li><a href="#">Twitter</a></li>
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">YouTube</a></li>
+		</ul>
+		<section class="footer__copyright">
+			Website by
+			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy-logo.png" alt="Html Academy"></a>
+		</section>
+	</footer>
+</body>
 </html>
