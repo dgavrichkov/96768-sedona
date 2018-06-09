@@ -10,9 +10,9 @@
 		<nav>
 			<img class="intro__logo" src="img/logo.png" width="138" height="72" alt="Логотип">
 			<ul class="intro__navigation">
-				<li><a>Информация</a></li>
-				<li><a>Фото и видео</a></li>
-				<li><a>Карта штата</a></li>
+				<li><a href="#">Информация</a></li>
+				<li><a href="#">Фото и видео</a></li>
+				<li><a href="#">Карта штата</a></li>
 				<li><a href="catalog.html">Гостиницы</a></li>
 			</ul>
 		</nav>
@@ -78,11 +78,33 @@
 			<b>Заинтересовались?</b>
 			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
 		</div>
-		<button class="search__button">Поиск гостиницы в Седоне</button>		
+		<button class="search__button" type="button">Поиск гостиницы в Седоне</button>		
 		<!-- Форма поиска, позднее -->
-		<!-- <form action="#">
+		<form class="search__form order-hotel-form" action="https://echo.htmlacademy.ru" method="post">
+			<div>
+				<label for="date-in">Дата въезда: </label>
+				<input type="text" id="date-in" name="date-in" placeholder="24 сентября 2018">
+			</div>
+			<div>
+				<label for="date-off">Дата выезда: </label>
+				<input type="text" id="date-off" name="date-off" placeholder="4 октября 2018">
+			</div>
+			<div>
+				<label for="adult-num">Взрослые:</label>
+				<input id="adult-num" type="text" placeholder="2">
+				<!-- на кнопки прикрутим скрипты -->
+				<button id="adult-reduce" type="button">-</button>
+				<button id="adult-increase" type="button">+</button>
+			</div>		
+			<div>
+				<label for="child-num">Дети:</label>
+				<input id="child-num" type="text" name="child-num" placeholder="0">
+				<button id="child-reduce" type="button">-</button>
+				<button id="child-increase" type="button">+</button>
+			</div>
+			<button type="submit">Найти</button>
+		</form>
 
-		</form> -->
 	</section>
 	<!-- Карта -->
 	<section class="map">
