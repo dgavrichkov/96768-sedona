@@ -20,8 +20,46 @@
 	<main class="hotels">
 		<h1 class="g--hidden">Выбор гостиницы</h1>
 		<!-- Форма подбора гостиницы, позднее -->
-		<form action="">
-			
+		<form class="hotels-form" action="https://echo.htmlacademy.ru" method="post" oninput="daysoutput.value=dayscount.value">
+			<fieldset>
+				<legend>Инфраструктура:</legend>
+				<ul>
+					<li>
+						<input id="hotels-pool" name="hotels-pool" type="checkbox">
+						<label for="hotels-pool">Бассейн</label>
+					</li>
+					<li>
+						<input id="hotels-parking" name="hotels-parking" type="checkbox">
+						<label for="hotels-parking">Парковка</label>
+					</li>
+					<li>
+						<input id="hotels-wifi" name="hotels-wifi" type="checkbox">
+						<label for="hotels-wifi">Wi-fi</label>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Тип жилья:</legend>
+				<ul>
+					<li>
+						<input id="hotels-type-1" name="hotels-type-1" type="checkbox">
+						<label for="hotels-type-1">Гостиница</label>
+					</li>
+					<li>
+						<input id="hotels-type-2" name="hotels-type-2" type="checkbox">
+						<label for="hotels-type-2">Мотель</label>
+					</li>
+					<li>
+						<input id="hotels-type-3" name="hotels-type-3" type="checkbox">
+						<label for="hotels-type-3">Апартаменты</label>
+					</li>
+				</ul>
+			</fieldset>
+			<!-- Здесь будет шкала цен -->
+			<!-- <div class="hotels-form__range">	
+
+			</div> -->
+			<button class="hotels-form__button" type="submit">Показать</button>
 		</form>
 		<ul class="hotels__list">
 			<li class="hotels__item">
