@@ -29,6 +29,11 @@ body{
 }
 
 /* Главное меню */
+.intro{
+	background-image: url('../img/background.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+}
 .intro__navigation{
 	color: #000000;
 	font-size: 14px;
@@ -80,7 +85,18 @@ body{
 .feature__number::after{
 	content: ' –';
 }
-
+.feature__illustration{
+	
+	background-repeat: no-repeat;
+	width: 800px;
+	height: 258px;
+}
+.feature__illustration{
+	background-image: url('../img/features_2.jpg');
+}
+.feature__wrapper:first-child .feature__illustration{
+	background-image: url('../img/features_1.jpg');
+}
 
 /* Поиск */
 .search{
@@ -101,7 +117,14 @@ body{
 	background-color: #81b3d2;
 } 
 
-
+/* Страница каталога */
+.inner-page .intro{
+	background-image: none;
+}
+.hotels-form{
+	background-image: url('../img/filter_background.jpg');
+	background-repeat: no-repeat;
+}
 /* Подвал */
 .footer{
 	background-color: #ffffff;
