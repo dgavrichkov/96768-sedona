@@ -1,0 +1,127 @@
+@font-face{
+	font-family: "PT Sans";
+	src: url('../fonts/ptsans.woff2');
+}
+@font-face{
+	font-family: "PT Sans Bold";
+	src: url('../fonts/ptsansbold.woff2');
+}
+/* Голубой цвет: #81b3d2;*/
+/* Серенький такой: #eeeeee*/
+/* Бедро дриады:  #766357*/
+/********* Базовая стилизация ***************/
+
+/* Некотороя всеобщая стилизация */
+body{
+	font-size: 14px;
+	line-height: 21px;
+	color: #333333;
+	font-family: "PT Sans", Arial, sans-serif;
+	text-transform: uppercase;
+	background-color: #f2f2f2;
+}
+.common__button{
+	/*общие свойства для большинства кнопок макета*/
+	font-family: "PT Sans Bold", Arial, sans-serif;
+	text-transform: uppercase;
+	color: #ffffff;
+	border: 0;
+}
+
+/* Главное меню */
+.intro__navigation{
+	color: #000000;
+	font-size: 14px;
+	line-height: 26px;
+	list-style: none;
+	font-family: "PT Sans Bold", Arial, sans-serif;
+	background-color: #ffffff;
+
+}
+.intro__navigation a{
+	color: #000000;
+	font-size: 14px;
+	line-height: 26px;
+	text-decoration: none;
+}
+.intro__navigation a:hover{
+	color: #81b3d2;
+}
+
+/* Главная часть*/
+.feature{
+	text-align: center;
+	background-color: #ffffff;
+}
+.feature b{
+	font-size: 21px;
+	line-height: 26px;
+	font-family: "PT Sans Bold", Arial, sans-serif;
+}
+.feature h3,
+.feature h4{
+	font-size: 21px;
+	line-height: 21px;
+	font-family: "PT Sans Bold", Arial, sans-serif;
+}
+.feature__list{
+	list-style: none;
+}
+.feature__list:last-child{
+	background-color: #eeeeee;
+}
+.feature__point{
+	background-color: #81b3d2;
+	color: #ffffff;
+}
+.feature__number::before{
+	content: '– ';
+}
+.feature__number::after{
+	content: ' –';
+}
+
+
+/* Поиск */
+.search{
+	background-color: #ffffff;
+}
+.search__title{
+	text-align: center;
+}
+.search__title b{
+	font-size: 30px;
+	line-height: 36px;
+	font-family: "PT Sans Bold", Arial, sans-serif;
+}
+.search__button{
+	background-color: #766357;	
+}
+.search__button--submit{
+	background-color: #81b3d2;
+} 
+
+
+/* Подвал */
+.footer{
+	background-color: #ffffff;
+}
+.footer__tag{
+	font-family: "PT Sans Bold", Arial, sans-serif;
+	color: black;
+	font-size: 21px;
+	line-height: 26px;
+}
+.footer__social{
+	list-style: none;
+}
+.footer__social li a{
+	background-color: #81b3d2;
+	color: white;
+	text-decoration: none;
+
+	padding: 5px;
+}
+.footer__copyright{
+
+}
