@@ -85,9 +85,9 @@
 		<h2 class="g--hidden">Поиск отеля</h2>
 		<div class="search__title">
 			<b>Заинтересовались?</b>
-			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+			<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 		</div>
-		<button class="search__button common__button" type="button">Поиск гостиницы в Седоне</button>		
+		<button class="search__button common__button common__button--dirt" type="button">Поиск гостиницы в Седоне</button>		
 		<!-- Форма поиска, позднее -->
 		<form class="search__form order-hotel-form" action="https://echo.htmlacademy.ru" method="post">
 			<div>
@@ -102,16 +102,16 @@
 				<label for="adult-num">Взрослые:</label>
 				<input id="adult-num" type="text" placeholder="2">
 				<!-- на кнопки прикрутим скрипты -->
-				<button id="adult-reduce" type="button">-</button>
-				<button id="adult-increase" type="button">+</button>
+				<button class="search__control" id="adult-reduce" type="button">-</button>
+				<button class="search__control" id="adult-increase" type="button">+</button>
 			</div>		
 			<div>
 				<label for="child-num">Дети:</label>
 				<input id="child-num" type="text" name="child-num" placeholder="0">
-				<button id="child-reduce" type="button">-</button>
-				<button id="child-increase" type="button">+</button>
+				<button class="search__control" id="child-reduce" type="button">-</button>
+				<button class="search__control" id="child-increase" type="button">+</button>
 			</div>
-			<button class="search__button--submit common__button" type="submit">Найти</button>
+			<button class="search__button--submit common__button common__button--light" type="submit">Найти</button>
 		</form>
 
 	</section>
@@ -124,9 +124,9 @@
 	<footer class="footer">
 		<p class="footer__tag">#VisitSedona</p>
 		<ul class="footer__social">
-			<li><a href="#">Twitter</a></li>
-			<li><a href="#">Facebook</a></li>
-			<li><a href="#">YouTube</a></li>
+			<li><a class="common__button common__button--light" href="#">Twitter</a></li>
+			<li><a class="common__button common__button--light" href="#">Facebook</a></li>
+			<li><a class="common__button common__button--light" href="#">YouTube</a></li>
 		</ul>
 		<section class="footer__copyright">
 			<p>Website by</p>
