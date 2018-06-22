@@ -9,9 +9,9 @@
 /* Голубой цвет: #81b3d2;*/
 /* Серенький такой: #eeeeee*/
 /* Бедро дриады:  #766357*/
-/********* Базовая стилизация ***************/
 
-/* Некотороя всеобщая стилизация */
+
+/***************** Некотороя всеобщая стилизация *****************/
 body{
 	font-size: 14px;
 	line-height: 21px;
@@ -21,7 +21,7 @@ body{
 	background-color: #f2f2f2;
 }
 .common__button{
-	/*общие свойства для большинства кнопок макета*/
+	/* общие свойства для большинства кнопок макета */
 	font-family: "PT Sans Bold", Arial, sans-serif;
 	text-transform: uppercase;
 	color: #ffffff;
@@ -51,12 +51,44 @@ body{
 	background-color: #503e33;
 	color: #928a85;
 }
+.common__container{
+	
+	margin: 0 auto;
+}
+/* сокрытые элементы */
+.g--hidden:not(:focus):not(:active),
+input[type="checkbox"].g--hidden,
+input[type="radio"].g--hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 
-/* Главное меню */
+
+/************************* Главное меню **************************/
 .intro{
 	background-image: url('../img/background.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
+
+	max-width: 1200px;
+	min-width: 768px;
+
+	position: relative;
+	min-height: 564px;
+}
+/* Сразу вырву из потока, чтоб не мешал */
+.intro__logo{
+	position: absolute;
+	top: 0;
+	left: 45%;
 }
 .intro__navigation{
 	color: #000000;
@@ -66,12 +98,43 @@ body{
 	font-family: "PT Sans Bold", Arial, sans-serif;
 	background-color: #ffffff;
 
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0;
+	padding: 0;
+}
+.intro__navigation li{
+	width: 20%;
+}
+.intro__navigation li:first-child{
+	margin-left: 6%;
+}
+.intro__navigation li:last-child{
+	margin-right: 6%;
+}
+.intro__navigation li:nth-child(2){
+	margin-right: 8%;
+}
+.intro__navigation li:nth-child(2),
+.intro__navigation li:first-child{
+	text-align: left;
+}
+.intro__navigation li:nth-child(3),
+.intro__navigation li:last-child{
+	text-align: right;
 }
 .intro__navigation a{
 	color: #000000;
 	font-size: 14px;
 	line-height: 26px;
 	text-decoration: none;
+	display: block;
+	padding: 16px 0;
 }
 .intro__navigation a:hover{
 	color: #81b3d2;
@@ -82,11 +145,23 @@ body{
 .intro__navigation--current{
 	color: #766357;
 }
+.intro__title{
+	width: 460px;
+	margin: 75px auto 0	;
+}
 
-/* Главная часть*/
+/*************************** Главная часть **************************/
 .feature{
 	text-align: center;
 	background-color: #ffffff;
+
+	max-width: 1200px;
+	min-width: 768px;
+}
+.feature p,
+.feature ul{
+	margin: 0;
+	padding: 0;
 }
 .feature b{
 	font-size: 21px;
@@ -98,39 +173,76 @@ body{
 	font-size: 21px;
 	line-height: 21px;
 	font-family: "PT Sans Bold", Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 .feature__list{
 	list-style: none;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+}
+.feature__list li{
+	width: 33%;
 }
 .feature__list:last-child{
 	background-color: #eeeeee;
 }
-.feature__point{
-	background-color: #81b3d2;
-	color: #ffffff;
-}
+
 .feature__number::before{
 	content: '– ';
 }
 .feature__number::after{
 	content: ' –';
 }
+.feature__wrapper{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
 .feature__illustration{
-	
 	background-repeat: no-repeat;
-	width: 800px;
-	height: 258px;
+	background-position: center;
+	width: 67%;
+	
 }
-.feature__illustration{
-	background-image: url('../img/features_2.jpg');
-}
-.feature__wrapper:first-child .feature__illustration{
+.feature__wrapper:nth-of-type(1) .feature__illustration{
 	background-image: url('../img/features_1.jpg');
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+}
+.feature__wrapper:nth-of-type(2) .feature__illustration{
+	background-image: url('../img/features_2.jpg');
+	order: -1;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+}
+.feature__point{
+	background-color: #81b3d2;
+	color: #ffffff;
+	width: 33%;
 }
 
-/* Поиск */
+/**************************** Поиск на главной *****************************/
 .search{
 	background-color: #ffffff;
+
+	max-width: 1200px;
+	min-width: 768px;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 .search__title{
 	text-align: center;
@@ -175,18 +287,49 @@ body{
 	color: #81b3d2;
 }
 
-/* Подвал */
+/*********************** Карта ***********************************/
+.map{
+	max-width: 1200px;
+	min-width: 768px;
+}
+.map img{
+	width: 100%;
+	height: auto;
+}
+
+/*********************** Подвал **********************************/
 .footer{
 	background-color: #ffffff;
+
+	max-width: 1200px;
+	min-width: 768px;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
 }
 .footer__tag{
 	font-family: "PT Sans Bold", Arial, sans-serif;
 	color: black;
 	font-size: 21px;
 	line-height: 26px;
+	text-align: center;
+
+	width: 33%;
 }
 .footer__social{
 	list-style: none;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+
+	width: 33%;
 }
 .footer__social li{
 	/*временно, а то смотреть противно*/
@@ -196,8 +339,19 @@ body{
 .footer__social a{
 	text-decoration: none;
 }
+.footer__copyright{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-/* Страница каталога */
+	width: 33%;
+}
+
+/********************* Страница каталога *************************/
 .inner-page .intro{
 	background-image: none;
 }
@@ -210,6 +364,8 @@ body{
 	font-size: 21px;
 	line-height: 26px;
 }
+
+/* Форма поиска */
 .hotels-form{
 	background-image: url('../img/filter_background.jpg');
 	background-repeat: no-repeat;
@@ -240,11 +396,10 @@ body{
 	list-style: none;
 	color: #ffffff;
 }
-/*---*/
 .hotels-form input:disabled + label{
 	color: #6a6a6a;
 }
-/*---*/
+/* Список отелей */
 .hotels__list{
 	list-style: none;
 }

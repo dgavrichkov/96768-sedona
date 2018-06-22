@@ -8,7 +8,8 @@
 </head>
 <body>
 	<!-- Заголовок -->
-	<header class="intro">
+	
+	<header class="intro common__container">
 		<nav>
 			<img class="intro__logo" src="img/logo.png" width="138" height="72" alt="Логотип">
 			<ul class="intro__navigation">
@@ -21,11 +22,10 @@
 		<section class="intro__title">
 			<h1 class="g--hidden">Добро пожаловать в Седону!</h1>
 			<img src="img/title.png" width="460" height="345" alt="Welcome to the gorgeous Sedona">
-
 		</section>
 	</header>
 	<!-- Основной контент -->
-	<main class="feature">
+	<main class="feature common__container">
 		<h2 class="g--hidden">Особенности</h2>
 		<b>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</b>
 		<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -39,15 +39,15 @@
 				<div class="feature__illustration"></div>
 			</div>
 			<ul class="feature__list">
-				<li>
+				<li class="feature__home">
 					<h4>Жилье</h4>
 					<p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
 				</li>
-				<li>
+				<li class="feature__meal">
 					<h4>Еда</h4>
 					<p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
 				</li>
-				<li>
+				<li class="feature__souvenir">
 					<h4>Сувениры</h4>
 					<p>Не только китайского, но и местного<br> производства!</p>
 				</li>
@@ -56,39 +56,39 @@
 				<div class="feature__point">
 					<h3>Там есть Мост Дьявола</h3>
 					<span class="feature__number">№2</span>
-					<p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+					<p>Да, по нему можно пройти! Если, конечно,<br> вы осмелитесь</p>
 				</div>
 				<div class="feature__illustration"></div>	
 			</div>
-			
+
 			<ul class="feature__list">
 				<li>
 					<h4>Небольшая <br>площадь</h4>
 					<span class="feature__number">№3</span>
-					<p>Все достопримечательности находятся очень близко</p>
+					<p>Все достопримечательности<br> находятся очень близко</p>
 				</li>
 				<li>
 					<h4>Красивая <br>дорога</h4>
 					<span class="feature__number">№4</span>
-					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+					<p>Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
 				</li>
 				<li>
 					<h4>Мало <br>туристов</h4>
 					<span class="feature__number">№5</span>
-					<p>Большинство едет в гранд каньон и толпится там</p>
+					<p>Большинство едет в гранд каньон<br> и толпится там</p>
 				</li>
 			</ul>
 		</section>
 	</main>
 	<!-- Поиск отеля -->
-	<section class="search">
+	<section class="search common__container">
 		<h2 class="g--hidden">Поиск отеля</h2>
 		<div class="search__title">
 			<b>Заинтересовались?</b>
 			<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 		</div>
 		<button class="search__button common__button common__button--dirt" type="button">Поиск гостиницы в Седоне</button>		
-		<!-- Форма поиска, позднее -->
+		
 		<form class="search__form order-hotel-form" action="https://echo.htmlacademy.ru" method="post">
 			<div>
 				<label for="date-in">Дата въезда: </label>
@@ -116,12 +116,12 @@
 
 	</section>
 	<!-- Карта -->
-	<section class="map">
+	<section class="map common__container">
 		<h2 class="g--hidden">Карта</h2>
-		<img src="img/map.jpg" alt="Карта">
+		<img src="img/map.jpg" alt="Карта" width="1200" height="471">
 	</section>
 	<!-- Подвальная часть -->
-	<footer class="footer">
+	<footer class="footer common__container">
 		<p class="footer__tag">#VisitSedona</p>
 		<ul class="footer__social">
 			<li><a class="common__button common__button--light" href="#">Twitter</a></li>
@@ -133,5 +133,6 @@
 			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy_logo.svg" width="115" height="41" alt="Html Academy"></a>
 		</section>
 	</footer>
+	
 </body>
 </html>
