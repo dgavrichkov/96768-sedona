@@ -104,6 +104,7 @@ input[type="radio"].g--hidden{
 	display: -o-flex;
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 
 	margin: 0;
 	padding: 0;
@@ -243,6 +244,7 @@ input[type="radio"].g--hidden{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	align-items: center;
 }
 .search__title{
 	text-align: center;
@@ -255,9 +257,14 @@ input[type="radio"].g--hidden{
 .search__title p{
 	line-height: 24px;
 }
+.search__button{
+	width: 570px;
+}
 
 .search__form{
 	font-family: "PT Sans Bold", Arial, sans-serif;
+
+	width: 570px;
 }
 .search__form div{
 	margin: 10px;
@@ -291,18 +298,23 @@ input[type="radio"].g--hidden{
 .map{
 	max-width: 1200px;
 	min-width: 768px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 }
 .map img{
 	width: 100%;
 	height: auto;
 }
-
 /*********************** Подвал **********************************/
 .footer{
 	background-color: #ffffff;
 
 	max-width: 1200px;
 	min-width: 768px;
+	min-height: 120px;
 
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -310,6 +322,11 @@ input[type="radio"].g--hidden{
 	display: -o-flex;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
+}
+.footer p{
+	padding: 0;
+	margin: 0;
 }
 .footer__tag{
 	font-family: "PT Sans Bold", Arial, sans-serif;
@@ -350,13 +367,36 @@ input[type="radio"].g--hidden{
 
 	width: 33%;
 }
+/*********** Организуем футер над картой **************************/
+.bottombar{
+	position: relative;
+	max-width: 1200px;
+	min-width: 768px;
+}
+.bottombar .footer{
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	
+	opacity: 0.9;
+}
 
 /********************* Страница каталога *************************/
 .inner-page .intro{
 	background-image: none;
+	min-height: 56px;
 }
 .hotels{
-	background-color: #ffffff
+	background-color: #ffffff;
+
+	max-width: 1200px;
+	min-width: 768px;
+}
+.hotels ul, p{
+	margin: 0;
+	padding: 0;
 }
 .hotels__item h2{
 	font-family: "PT Sans Bold", Arial, sans-serif;
@@ -364,11 +404,34 @@ input[type="radio"].g--hidden{
 	font-size: 21px;
 	line-height: 26px;
 }
+.hotels__column--1{
+	width: 33%;
 
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.hotels__column--2{
+	width: 67%;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
 /* Форма поиска */
 .hotels-form{
 	background-image: url('../img/filter_background.jpg');
 	background-repeat: no-repeat;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 }
 .hotels-form__button{
 	font-family: "PT Sans", Arial, sans-serif;
@@ -385,7 +448,11 @@ input[type="radio"].g--hidden{
 
 .hotels-form fieldset{
 	border: none;
+
+	width: 33%;
 }
+
+
 .hotels-form legend{
 	font-family: "PT Sans Bold", Arial, sans-serif;
 	color: #ffffff;
@@ -412,9 +479,27 @@ input[type="radio"].g--hidden{
 	font-size: 21px;
 	line-height: 26px;
 }
+.hotels__filter{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	/*пока что*/
+	justify-content: space-around;
+
+	min-height: 86px;
+}
 .filter__list{
 	list-style: none;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 }
+
 .filter__control{
 	font-size: 12px;
 	line-height: 18px;
@@ -428,7 +513,15 @@ input[type="radio"].g--hidden{
 	color: #81b3d2;
 	border: none;
 }
-
+.hotels__item{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	/*пока что*/
+	justify-content: space-around;
+}
 .hotels__filter,
 .hotels__item{
 	border-bottom: 1px solid #e5e5e5;

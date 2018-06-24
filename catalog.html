@@ -8,7 +8,7 @@
 </head>
 <body class="inner-page">
 	<!-- Заголовок -->
-	<header class="intro">
+	<header class="intro common__container">
 		<nav>
 			<a href="index.html"><img class="intro__logo" src="img/logo.png" alt="Логотип"></a>
 			<ul class="intro__navigation">
@@ -19,51 +19,56 @@
 			</ul>
 		</nav>
 	</header>
-	<main class="hotels">
+
+	<main class="hotels common__container">
 		<h1 class="g--hidden">Выбор гостиницы</h1>
 		<!-- Форма подбора гостиницы, позднее -->
 		<form class="hotels-form" action="https://echo.htmlacademy.ru" method="post" oninput="daysoutput.value=dayscount.value">
-			<fieldset>
-				<legend>Инфраструктура:</legend>
-				<ul>
-					<li>
-						<input id="hotels-pool" name="hotels-pool" type="checkbox" disabled>
-						<label for="hotels-pool">Бассейн</label>
-					</li>
-					<li>
-						<input id="hotels-parking" name="hotels-parking" type="checkbox">
-						<label for="hotels-parking">Парковка</label>
-					</li>
-					<li>
-						<input id="hotels-wifi" name="hotels-wifi" type="checkbox">
-						<label for="hotels-wifi">Wi-fi</label>
-					</li>
-				</ul>
-			</fieldset>
-			<fieldset>
-				<legend>Тип жилья:</legend>
-				<ul>
-					<li>
-						<input id="hotels-type-1" name="hotels-type-1" type="checkbox">
-						<label for="hotels-type-1">Гостиница</label>
-					</li>
-					<li>
-						<input id="hotels-type-2" name="hotels-type-2" type="checkbox">
-						<label for="hotels-type-2">Мотель</label>
-					</li>
-					<li>
-						<input id="hotels-type-3" name="hotels-type-3" type="checkbox">
-						<label for="hotels-type-3">Апартаменты</label>
-					</li>
-				</ul>
-			</fieldset>
-			<!-- Здесь будет шкала цен -->
+			<div class="hotels__column--2">
+				<fieldset>
+					<legend>Инфраструктура:</legend>
+					<ul>
+						<li>
+							<input id="hotels-pool" name="hotels-pool" type="checkbox" disabled>
+							<label for="hotels-pool">Бассейн</label>
+						</li>
+						<li>
+							<input id="hotels-parking" name="hotels-parking" type="checkbox">
+							<label for="hotels-parking">Парковка</label>
+						</li>
+						<li>
+							<input id="hotels-wifi" name="hotels-wifi" type="checkbox">
+							<label for="hotels-wifi">Wi-fi</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Тип жилья:</legend>
+					<ul>
+						<li>
+							<input id="hotels-type-1" name="hotels-type-1" type="checkbox">
+							<label for="hotels-type-1">Гостиница</label>
+						</li>
+						<li>
+							<input id="hotels-type-2" name="hotels-type-2" type="checkbox">
+							<label for="hotels-type-2">Мотель</label>
+						</li>
+						<li>
+							<input id="hotels-type-3" name="hotels-type-3" type="checkbox">
+							<label for="hotels-type-3">Апартаменты</label>
+						</li>
+					</ul>
+				</fieldset>
+			</div>
+			<div class="hotels__column--1"></div>
 			<fieldset>
 				<legend>Стоимость в сутки (Р):</legend>
+				<!-- Сложный фильтр -->
 				<div></div>
+				<button class="hotels-form__button common__button" type="submit">Показать</button>
 			</fieldset>
-			<button class="hotels-form__button common__button" type="submit">Показать</button>
 		</form>
+
 		<ul class="hotels__list">
 			<div class="hotels__filter filter">
 				<b>Найдено: 3</b>
@@ -75,40 +80,56 @@
 				</ul>
 			</div>
 			<li class="hotels__item">
-				<h2>Amara Resort & Spa</h2>
-				<p class="hotels__item__illustration"><img src="img/hotel-1.jpg" width="135" height="90" alt="Amara Resort & Spa"></p>
-				<span class="hotels__item__type">Гостиница</span>
-				<span class="hotels__item__price">от 4000 руб.</span>
-				<a class="hotels__item__desc common__button common__button--light" href="#">Подробнее</a>
-				<a class="hotels__item__order common__button common__button--dirt" href="#">Забронировать</a>
-				<div class="hotels__item__stars">4</div>
-				<div class="hotels__item__rating">Рейтинг: 8,5</div>
+				<div class="hotels__column--2">
+					<h2>Amara Resort & Spa</h2>
+					<div class="hotels__item__illustration">
+						<img src="img/hotel-1.jpg" width="135" height="90" alt="Amara Resort & Spa">
+					</div>
+					<span class="hotels__item__type">Гостиница</span>
+					<span class="hotels__item__price">от 4000 руб.</span>
+					<a class="hotels__item__desc common__button common__button--light" href="#">Подробнее</a>
+					<a class="hotels__item__order common__button common__button--dirt" href="#">Забронировать</a>
+				</div>
+				<div class="hotels__column--1">
+					<div class="hotels__item__stars">4</div>
+					<div class="hotels__item__rating">Рейтинг: 8,5</div>
+				</div>
 			</li>
 			<li class="hotels__item">
-				<h2>Desert Quail Inn</h2>
-				<p class="hotels__item__illustration"><img src="img/hotel-2.jpg" width="135" height="90" alt="Desert Quail Inn"></p>
-				<span class="hotels__item__type">Мотель</span>
-				<span class="hotels__item__price">от 3000 руб.</span>
-				<a class="hotels__item__desc common__button common__button--light" href="#">Подробнее</a>
-				<a class="hotels__item__order common__button common__button--dirt" href="#">Забронировать</a>
-				<div class="hotels__item__stars">3</div>
-				<div class="hotels__item__rating">Рейтинг: 8,9</div>
+				<div class="hotels__column--2">
+					<h2>Desert Quail Inn</h2>
+					<div class="hotels__item__illustration">
+						<img src="img/hotel-2.jpg" width="135" height="90" alt="Desert Quail Inn">
+					</div>
+					<span class="hotels__item__type">Мотель</span>
+					<span class="hotels__item__price">от 3000 руб.</span>
+					<a class="hotels__item__desc common__button common__button--light" href="#">Подробнее</a>
+					<a class="hotels__item__order common__button common__button--dirt" href="#">Забронировать</a>
+				</div>
+				<div class="hotels__column--1">
+					<div class="hotels__item__stars">3</div>
+					<div class="hotels__item__rating">Рейтинг: 8,9</div>
+				</div>
 			</li>
 			<li class="hotels__item">
-				<h2>Villas at Poco Diablo</h2>
-				<p class="hotels__item__illustration"><img src="img/hotel-3.jpg" width="135" height="90" alt="Villas at Poco Diablo"></p>
-				<span class="hotels__item__type">Апартаменты</span>
-				<span class="hotels__item__price">от 2000 руб.</span>
-				<a class="hotels__item__desc common__button common__button--light" href="#">Подробнее</a>
-				<a class="hotels__item__order common__button common__button--dirt" href="#">Забронировать</a>
-				<div class="hotels__item__stars">2</div>
-				<div class="hotels__item__rating">Рейтинг: 9,2</div>
+				<div class="hotels__column--2">
+					<h2>Villas at Poco Diablo</h2>
+					<div class="hotels__item__illustration">
+						<img src="img/hotel-3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+					</div>
+					<span class="hotels__item__type">Апартаменты</span>
+					<span class="hotels__item__price">от 2000 руб.</span>
+					<a class="hotels__item__desc common__button common__button--light" href="#">Подробнее</a>
+					<a class="hotels__item__order common__button common__button--dirt" href="#">Забронировать</a>
+				</div>
+				<div class="hotels__column--1">
+					<div class="hotels__item__stars">2</div>
+					<div class="hotels__item__rating">Рейтинг: 9,2</div>
+				</div>
 			</li>
 		</ul>
 	</main>
-
-
-	<footer class="footer">
+	<footer class="footer common__container">
 		<p class="footer__tag">#VisitSedona</p>
 		<ul class="footer__social">
 			<li><a class="common__button common__button--light" href="#">Twitter</a></li>
