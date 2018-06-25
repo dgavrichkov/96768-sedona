@@ -28,8 +28,7 @@ body{
 	border: 0;
 	outline: none;
 
-	/*  */
-	padding: 10px;
+	
 }
 .common__button--light{
 	background-color: #81b3d2;
@@ -252,6 +251,8 @@ input[type="radio"].g--hidden{
 }
 .search__title{
 	text-align: center;
+	padding-top: 55px;
+	padding-bottom: 48px;
 }
 .search__title b{
 	font-size: 30px;
@@ -260,26 +261,46 @@ input[type="radio"].g--hidden{
 }
 .search__title p{
 	line-height: 24px;
+	margin-top: 30px;
 }
 .search__button{
 	width: 570px;
+	font-size: 21px;
+	line-height: 26px;
+	text-align: center;
+	padding: 32px 0;
 }
-
 .search__form{
 	font-family: "PT Sans Bold", Arial, sans-serif;
 
+	box-sizing: border-box;
 	width: 570px;
+	padding: 55px;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;	
+	flex-wrap: wrap;
+
+	box-shadow: inset 0 0 0 1px green;
+	
 }
 .search__form div{
-	margin: 10px;
-	padding: 10px;
+	width: 100%;
+}
+.search__form div:nth-child(3), .search__form div:nth-child(4){
+	width: 50%;
 }
 .search__form input, 
 .search__control{
-	padding: 10px;
+	
 	outline: none;
 	border: none;
 	background: #f2f2f2;
+
+	height: 37px; 
 }
 .search__form input:hover{
 	background-color: #ebebeb;
@@ -290,12 +311,46 @@ input[type="radio"].g--hidden{
 }
 .search__control{
 	color: #a9a9a9;
+	width: 37px;
+	height: 37px;
+	padding: 0 12px;
+	text-align: center;
 }
 .search__control:hover{
 	color: #000000;
 }
 .search__control:active{
 	color: #81b3d2;
+}
+.search__button--submit{
+	width: 458px;
+	padding: 18px 0;
+	margin-top: 24px;
+}
+.order-form__field{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.order-form__adults div,
+.order-form__kids div{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-end;
+}
+.order-form__adults input,
+.order-form__kids input{
+	width: 40px;
+	text-align: center;
 }
 
 /*********************** Карта ***********************************/
@@ -328,7 +383,7 @@ input[type="radio"].g--hidden{
 	justify-content: space-around;
 	align-items: center;
 }
-.footer p{
+.footer p, ul{
 	padding: 0;
 	margin: 0;
 }
@@ -353,13 +408,26 @@ input[type="radio"].g--hidden{
 	width: 33%;
 }
 .footer__social li{
-	/*временно, а то смотреть противно*/
-	padding: 5px;
-	margin: 15px;
+	
+}
+.footer__social li:nth-child(2){
+	margin-right: 10px;
+	margin-left: 10px;
 }
 .footer__social a{
-	text-decoration: none;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	padding: 0;
+	width: 47px;
+	height: 47px;
 }
+
 .footer__copyright{
 	display: -webkit-flex;
 	display: -moz-flex;
