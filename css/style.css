@@ -84,13 +84,15 @@ input[type="radio"].g--hidden{
 	position: relative;
 	min-height: 564px;
 
+}
+.intro nav{
 	position: relative;
 }
-/* Сразу вырву из потока, чтоб не мешал */
 .intro__logo{
 	position: absolute;
 	top: 0;
-	left: 44%;
+	left: 50%;
+	margin-left: -69px;
 }
 .intro__navigation{
 	color: #000000;
@@ -123,9 +125,6 @@ input[type="radio"].g--hidden{
 .intro__navigation li:nth-child(2){
 	padding-right: 8%;
 }
-/*.intro__navigation li:nth-child(3){
-	padding-left: auto;
-}*/
 .intro__navigation li:nth-child(2),
 .intro__navigation li:first-child{
 	text-align: left;
@@ -371,6 +370,9 @@ input[type="radio"].g--hidden{
 	justify-content: center;
 
 	width: 33%;
+}
+.footer__copyright img{
+	padding-left: 10px;	
 }
 /*********** Организуем футер над картой **************************/
 .bottombar{
