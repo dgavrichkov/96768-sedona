@@ -83,12 +83,14 @@ input[type="radio"].g--hidden{
 
 	position: relative;
 	min-height: 564px;
+
+	position: relative;
 }
 /* Сразу вырву из потока, чтоб не мешал */
 .intro__logo{
 	position: absolute;
 	top: 0;
-	left: 45%;
+	left: 44%;
 }
 .intro__navigation{
 	color: #000000;
@@ -113,14 +115,17 @@ input[type="radio"].g--hidden{
 	width: 20%;
 }
 .intro__navigation li:first-child{
-	margin-left: 6%;
+	padding-left: 6%;
 }
 .intro__navigation li:last-child{
-	margin-right: 6%;
+	padding-right: 6%;
 }
 .intro__navigation li:nth-child(2){
-	margin-right: 8%;
+	padding-right: 8%;
 }
+/*.intro__navigation li:nth-child(3){
+	padding-left: auto;
+}*/
 .intro__navigation li:nth-child(2),
 .intro__navigation li:first-child{
 	text-align: left;
@@ -394,7 +399,7 @@ input[type="radio"].g--hidden{
 	max-width: 1200px;
 	min-width: 768px;
 }
-.hotels ul, p{
+.hotels ul, p, h2{
 	margin: 0;
 	padding: 0;
 }
@@ -412,6 +417,11 @@ input[type="radio"].g--hidden{
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	flex-direction: column;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+	padding-right: 72px;
+	margin-left: auto;
 }
 .hotels__column--2{
 	width: 67%;
@@ -421,6 +431,8 @@ input[type="radio"].g--hidden{
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+
+	padding-left: 72px;
 }
 /* Форма поиска */
 .hotels-form{
@@ -486,9 +498,12 @@ input[type="radio"].g--hidden{
 	display: -o-flex;
 	display: flex;
 	/*пока что*/
-	justify-content: space-around;
+	justify-content: space-between;
 
 	min-height: 86px;
+}
+.hotels__filter .hotels__column--2{
+	align-items: center;
 }
 .filter__list{
 	list-style: none;
@@ -512,6 +527,11 @@ input[type="radio"].g--hidden{
 .filter__control--current{
 	color: #81b3d2;
 	border: none;
+}
+.filter__indicator{
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
 }
 .hotels__item{
 	display: -webkit-flex;
