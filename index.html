@@ -93,26 +93,26 @@
 			<button class="search__button common__button common__button--dirt" type="button">Поиск гостиницы в Седоне</button>		
 
 			<form class="search__form order-form" action="https://echo.htmlacademy.ru" method="post">
-				<div class="order-form__field order-form__datein">
+				<div class="order-form__field order-form__field--datein">
 					<label for="date-in">Дата въезда: </label>
 					<input type="text" id="date-in" name="date-in" placeholder="24 сентября 2018">
 				</div>
-				<div class="order-form__field order-form__dateoff">
+				<div class="order-form__field order-form__field--dateoff">
 					<label for="date-off">Дата выезда: </label>
 					<input type="text" id="date-off" name="date-off" placeholder="4 октября 2018">
 				</div>
-				<div class="order-form__field order-form__adults">
+				<div class="order-form__field order-form__field--adults">
 					<label for="adult-num">Взрослые:</label>
-					<div>
+					<div class="order-form__counter">
 						<input id="adult-num" type="text" placeholder="2">
 						<!-- на кнопки прикрутим скрипты -->
 						<button class="search__control" id="adult-reduce" type="button">-</button>
 						<button class="search__control" id="adult-increase" type="button">+</button>
 					</div>
 				</div>		
-				<div class="order-form__field order-form__kids">
+				<div class="order-form__field order-form__field--kids">
 					<label for="child-num">Дети:</label>
-					<div>
+					<div class="order-form__counter"> 
 						<input id="child-num" type="text" name="child-num" placeholder="0">
 						<button class="search__control" id="child-reduce" type="button">-</button>
 						<button class="search__control" id="child-increase" type="button">+</button>
@@ -129,6 +129,7 @@
 			<h2 class="g--hidden">Карта</h2>
 			<img src="img/map.jpg" alt="Карта" width="1200" height="593">
 		</section>
+
 		<!-- Подвальная часть -->
 		<footer class="footer common__container">
 			<p class="footer__tag">#VisitSedona</p>

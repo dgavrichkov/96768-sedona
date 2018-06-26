@@ -300,13 +300,11 @@ ul.feature__list{
 	background-image: url(../img/icon-3.svg);
 }	
 
-/**************************** Поиск на главной *****************************/
+/*********************** Поиск на главной ***************************/
 .search{
 	background-color: #ffffff;
-
 	max-width: 1200px;
 	min-width: 768px;
-
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -339,20 +337,16 @@ ul.feature__list{
 }
 .search__form{
 	font-family: "PT Sans Bold", Arial, sans-serif;
-
 	box-sizing: border-box;
 	width: 570px;
 	padding: 55px;
-
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;	
 	flex-wrap: wrap;
-
 	box-shadow: inset 0 0 0 1px green;
-	
 }
 .search__form div{
 	width: 100%;
@@ -360,14 +354,17 @@ ul.feature__list{
 .search__form div:nth-child(3), .search__form div:nth-child(4){
 	width: 50%;
 }
+.search__form div:nth-child(3){
+	justify-content: space-between;
+}
+.search__form div:nth-child(4){
+	justify-content: flex-end;
+}
 .search__form input, 
 .search__control{
-	
 	outline: none;
-
 	border: none;
 	background: #f2f2f2;
-
 	height: 37px; 
 }
 .search__form input:hover{
@@ -406,19 +403,35 @@ ul.feature__list{
 	align-items: center;
 	margin-bottom: 30px;
 }
-.order-form__adults div,
-.order-form__kids div{
+.order-form__field .order-form__counter{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 	justify-content: flex-end;
+	width: 114px;
 }
-.order-form__adults input,
-.order-form__kids input{
+.order-form__counter button:nth-of-type(1){
+	order: 1;
+}
+.order-form__counter button:nth-of-type(2){
+	order: 3;
+}
+.order-form__field--datein input,
+.order-form__field--dateoff input{
+	box-sizing: border-box;
+	width: 343px;
+	padding-left: 10px;
+}
+.order-form__field--adults input,
+.order-form__field--kids input{
 	width: 40px;
 	text-align: center;
+	order: 2;
+}
+.order-form__field--kids .order-form__counter{
+	margin-left: 25px;
 }
 
 /*********************** Карта ***********************************/
@@ -472,7 +485,6 @@ ul.feature__list{
 	display: -o-flex;
 	display: flex;
 	justify-content: center;
-
 	width: 33%;
 }
 .footer__social li{
