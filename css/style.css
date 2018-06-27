@@ -538,6 +538,7 @@ ul.feature__list{
 	opacity: 0.9;
 }
 
+/**************************************************************************************************************************************************************************************************************************/
 /********************* Страница каталога *************************/
 .inner-page .intro{
 	background-image: none;
@@ -598,10 +599,9 @@ ul.feature__list{
 .hotels-form__button{
 	font-family: "PT Sans", Arial, sans-serif;
 	background-color: transparent;
-	padding: 5px;
+	padding: 8px 32px;
 	border: 2px solid #ffffff;
 	border-radius: 2px;
-	margin: 5px;
 }
 .hotels-form__button:hover{
 	background-color: #ffffff;
@@ -613,8 +613,6 @@ ul.feature__list{
 
 	width: 33%;
 }
-
-
 .hotels-form legend{
 	font-family: "PT Sans Bold", Arial, sans-serif;
 	color: #ffffff;
@@ -628,6 +626,8 @@ ul.feature__list{
 .hotels-form input:disabled + label{
 	color: #6a6a6a;
 }
+
+
 /* Список отелей */
 .hotels__list{
 	list-style: none;
@@ -655,6 +655,18 @@ ul.feature__list{
 .hotels__filter .hotels__column--2{
 	align-items: center;
 }
+.hotels__item__more,
+.hotels__item__order{
+	padding: 7px 14px;
+}
+
+.hotels__item__rating{
+	padding: 7px 14px;
+}
+
+
+
+
 .filter__list{
 	list-style: none;
 
