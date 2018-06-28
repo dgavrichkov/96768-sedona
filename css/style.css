@@ -346,7 +346,6 @@ ul.feature__list{
 	display: -o-flex;
 	display: flex;	
 	flex-wrap: wrap;
-	box-shadow: inset 0 0 0 1px green;
 }
 .search__form div{
 	width: 100%;
@@ -560,33 +559,32 @@ ul.feature__list{
 	font-size: 21px;
 	line-height: 26px;
 }
-.hotels__column--1{
-	width: 33%;
 
+.hotels__column{
+	box-sizing: border-box;
+	width: 100%;
+	/*padding-left: 72px;
+	padding-right: 72px;*/
+	padding-left: 6%;
+	padding-right: 6%;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	flex-direction: column;
-	-ms-align-items: flex-end;
-	align-items: flex-end;
-	padding-right: 72px;
-	margin-left: auto;
+}
+.hotels__column--1{
+	width: 33%;
+	padding: 0;
 }
 .hotels__column--2{
 	width: 67%;
-
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-
-	padding-left: 72px;
+	padding: 0;
 }
+
 /* Форма поиска */
 .hotels-form{
+	/* ИЗОБРАЖЕНИЕ ПЕРЕДЕЛАТЬ, несоотвествие макету */
 	background-image: url('../img/filter_background.jpg');
 	background-repeat: no-repeat;
 
@@ -595,6 +593,10 @@ ul.feature__list{
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	
+	box-sizing: border-box;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 .hotels-form__button{
 	font-family: "PT Sans", Arial, sans-serif;
@@ -610,27 +612,94 @@ ul.feature__list{
 
 .hotels-form fieldset{
 	border: none;
-
-	width: 33%;
+	margin: 0;
+	padding: 0;
+	margin-right: 110px;
+}
+.hotels-form fieldset:last-child{
+	margin-left: auto;
 }
 .hotels-form legend{
 	font-family: "PT Sans Bold", Arial, sans-serif;
 	color: #ffffff;
 	font-size: 16px;
 	line-height: 21px;
+	margin-bottom: 20px;
 }
 .hotels-form ul{
 	list-style: none;
 	color: #ffffff;
 }
+.hotels-form__option{
+	padding-left: 38px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+}
+.hotels-form__option:last-child{
+	margin-bottom: 0;
+}
+.hotels-form__option label{
+	position: relative;
+}
 .hotels-form input:disabled + label{
 	color: #6a6a6a;
 }
+.hotels-form__input + label::before{
+	content: "";
+	position: absolute;
+	box-sizing: border-box;
+	width: 27px;
+	height: 23px;
+	left: -38px;
+	top: -3px;
+	background: url('../img/checkbox-off.svg') no-repeat;
+}
+.hotels-form__input:disabled + label::before{
+	border-color: #6a6a6a;
+	background: url('../img/checkbox-off-disabled.svg') no-repeat;
+}
+.hotels-form__input:checked + label::before{
+	background: url('../img/checkbox-on.svg') no-repeat;
+}
+.hotels-form .hotels__column--1{
+	justify-content: flex-start;
+}
 
+/* FILTER */
+.filter{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-start;
+	/*пока что*/
+	min-height: 86px;
+}
+.filter__sort{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.filter__indicator{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
 
 /* Список отелей */
 .hotels__list{
 	list-style: none;
+	width: 100%;
 }
 .hotels__list a{
 	text-decoration: none;
@@ -641,30 +710,18 @@ ul.feature__list{
 	font-size: 21px;
 	line-height: 26px;
 }
-.hotels__filter{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	/*пока что*/
-	justify-content: space-between;
-
-	min-height: 86px;
+.hotels__item-more,
+.hotels__item-order{
+	padding: 7px 14px;
 }
-.hotels__filter .hotels__column--2{
-	align-items: center;
-}
-.hotels__item__more,
-.hotels__item__order{
+.hotels__item-rating{
+	background-color: #f2f2f2;
 	padding: 7px 14px;
 }
 
-.hotels__item__rating{
-	padding: 7px 14px;
+.hotels__item-reputation{
+	margin-left: auto;
 }
-
-
 
 
 .filter__list{
@@ -701,16 +758,8 @@ ul.feature__list{
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	/*пока что*/
-	justify-content: space-around;
 }
 .hotels__filter,
 .hotels__item{
 	border-bottom: 1px solid #e5e5e5;
-}
-
-.hotels__item__rating{
-	background-color: #f2f2f2;
-
-	padding: 5px;
 }
