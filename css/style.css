@@ -340,12 +340,20 @@ ul.feature__list{
 	box-sizing: border-box;
 	width: 570px;
 	padding: 55px;
+	background-color: #ffffff;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;	
 	flex-wrap: wrap;
+}
+.search__popup{
+	position: absolute;
+	z-index: 1;
+}
+.search__popup--off{
+	display: none;
 }
 .search__form div{
 	width: 100%;
@@ -733,7 +741,6 @@ ul.feature__list{
 	display: flex;
 	flex-direction: column;
 	margin-left: 30px;
-	/*max-height: 90px;*/
 }
 .hotels__item-description h2{
 	margin-bottom: 5px;
@@ -769,7 +776,7 @@ ul.feature__list{
 	-ms-align-items: flex-end;
 	justify-content: space-between;
 	align-items: flex-end;
-	max-height: 90px;
+	/*max-height: 90px;*/
 }
 
 .hotels-stars__list{
