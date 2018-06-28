@@ -694,15 +694,44 @@ ul.feature__list{
 	-ms-align-items: center;
 	align-items: center;
 }
-.filter__indicator{
+.filter__list{
+	list-style: none;
+
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+}
+.filter__control{
+	font-size: 12px;
+	line-height: 18px;
+	color: #cacaca;
+	border-bottom: 1px dotted #81b3d2;
+}
+.filter__control:hover{
+	color: #81b3d2;
+}
+.filter__control--current{
+	color: #81b3d2;
+	border: none;
+}
+
+.filter__indicator{
+	width: 36px;
+	padding: 0;
+	margin-left: auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
 }
+
+
 
 /* Список отелей */
 .hotels__list{
@@ -797,34 +826,7 @@ ul.feature__list{
 }
 
 /***********************/
-.filter__list{
-	list-style: none;
 
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-}
-
-.filter__control{
-	font-size: 12px;
-	line-height: 18px;
-	color: #cacaca;
-	border-bottom: 1px dotted #81b3d2;
-}
-.filter__control:hover{
-	color: #81b3d2;
-}
-.filter__control--current{
-	color: #81b3d2;
-	border: none;
-}
-.filter__indicator{
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
-}
 
 .hotels__filter,
 .hotels__item{
