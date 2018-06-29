@@ -607,11 +607,13 @@ ul.feature__list{
 	padding-bottom: 30px;
 }
 .hotels-form__button{
+	display: block;
 	font-family: "PT Sans", Arial, sans-serif;
 	background-color: transparent;
 	padding: 8px 32px;
 	border: 2px solid #ffffff;
 	border-radius: 2px;
+	margin: 0 auto;
 }
 .hotels-form__button:hover{
 	background-color: #ffffff;
@@ -622,6 +624,8 @@ ul.feature__list{
 	border: none;
 	margin: 0;
 	padding: 0;
+}
+.hotels-form fieldset:not(:last-child){
 	margin-right: 110px;
 }
 .hotels-form fieldset:last-child{
@@ -673,6 +677,83 @@ ul.feature__list{
 .hotels-form .hotels__column--1{
 	justify-content: flex-start;
 }
+/*  RANGE  */
+.range{
+	width: 330px;
+	color: #ffffff;
+}
+.range__price-controls{
+	position: relative;
+	height: 36px;
+	margin-bottom: 20px;
+	font-size: 0;
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+}
+.range__price-controls::after{
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 22px;
+	background-color: #ffffff;
+	top: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%);
+}
+.range__price-controls label{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 38px;
+	vertical-align: top;
+	cursor: pointer;
+}
+.range__min-price,
+.range__max-price{
+	width: 90px;
+	padding-left: 65px;
+}
+.range__price-controls input{
+	width: 50px;
+	margin: 0;
+	color: inherit;
+	font: inherit;
+	background: none;
+	border: none;
+}
+.range__controls{
+	position: relative;
+	margin-bottom: 32px;
+}
+.range__toggle{
+	position: absolute;
+	top: -9px;
+	width: 4px;
+	height: 4px;
+	background: #ababab;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+	cursor: pointer;
+}
+.range__toggle:hover{
+	background: #1c4f80;
+}
+.range__toggle--min{
+	left: 0;
+}
+.range__toggle--max{
+	left: 80%;
+}
+.range__scale{
+	height: 2px;
+	background: rgba(255, 255, 255, 0.3);
+}
+.range__bar{
+	width: 80%;
+	height: 2px;
+	background: #ffffff;
+}
+
 
 /* FILTER */
 .filter{
@@ -692,16 +773,28 @@ ul.feature__list{
 	display: -o-flex;
 	display: flex;
 	-ms-align-items: center;
+	justify-content: flex-start;
 	align-items: center;
 }
+.filter__sort span{
+	margin-left: 50px;
+}
+.filter__sort ul{
+	margin-left: 40px;
+}
+
 .filter__list{
 	list-style: none;
-
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.filter__list li:not(:first-child){
+	margin-left: 33px;
 }
 .filter__control{
 	font-size: 12px;
@@ -716,7 +809,6 @@ ul.feature__list{
 	color: #81b3d2;
 	border: none;
 }
-
 .filter__indicator{
 	width: 36px;
 	padding: 0;

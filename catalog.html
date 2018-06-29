@@ -58,10 +58,20 @@
 					</li>
 				</ul>
 			</fieldset>
-			<fieldset class="hotels-form__range">
-				<legend>Стоимость в сутки (Р):</legend>
+			<fieldset class="hotels-form__range range">
+				<legend class="range__title">Стоимость в сутки (Р):</legend>
 				<!-- Сложный фильтр -->
-				<div></div>
+				<div class="range__price-controls">
+					<label class="range__min-price">от <input type="text" name="min-price" value="0"></label>
+					<label class="range__max-price">до <input type="text" name="max-price" value="3000"></label>					
+				</div>
+				<div class="range__controls">
+					<div class="range__scale">
+						<div class="range__bar"></div>
+					</div>
+					<div class="range__toggle range__toggle--min"></div>
+					<div class="range__toggle range__toggle--max"></div>
+				</div>
 				<button class="hotels-form__button common__button" type="submit">Показать</button>
 			</fieldset>
 		</form>
