@@ -619,7 +619,7 @@ ul.feature__list{
 	/* ИЗОБРАЖЕНИЕ ПЕРЕДЕЛАТЬ, несоотвествие макету */
 	background-image: url('../img/filter_background.jpg');
 	background-repeat: no-repeat;
-
+	background-position: 0px -58px;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -887,11 +887,18 @@ ul.feature__list{
 	display: -o-flex;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 	margin-left: 30px;
+
 }
 .hotels__item-description h2{
-	margin-bottom: 5px;
-	margin-top: -5px;
+	font-size: 21px;
+	line-height: 21px;
+	margin-bottom: 12px;
+}
+.hotels__item-description span{
+	font-size: 14px;
+	line-height: 14px;
 }
 .hotels__item-description div:nth-of-type(1){
 	display: flex;
@@ -900,17 +907,21 @@ ul.feature__list{
 	width: 185px;
 }
 .hotels__item-description div:nth-of-type(2){
-	margin-top: 12px;
-
-
+	display: flex;
+	width: 258px;
+	justify-content: space-between;
+	margin-top: auto;
 }
 .hotels__item-more{
-	margin-right: 5px;
+	/*margin-right: 5px;*/
 }
 .hotels__item-more,
 .hotels__item-order{
-	min-height: 28px;
-	padding: 7px 16px;
+	display: block;
+	padding: 8px 16px; 
+	/*min-height: 28px;*/
+	font-size: 14px;
+	line-height: 14px;
 }
 .hotels__item-rating{
 	background-color: #f2f2f2;
