@@ -443,10 +443,26 @@ ul.feature__list{
 	margin-left: 25px;
 }
 
-.order-form__field .order-form__calendar-icon{
+.order-form__calendar-icon{
 	width: 21px;
+	height: 22px;
+	padding: 0;
 	position: absolute;
-	left: 90%;
+	right: 8px;
+	top: 50%;
+	margin-top: -11px;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+.order-form__calendar-icon path{
+	fill: #cacaca;
+}
+.order-form__calendar-icon:hover path{
+	fill: #000000;
+}
+.order-form__calendar-icon:active path{
+	fill: #81b3d2;
 }
 
 /*********************** Карта ***********************************/
