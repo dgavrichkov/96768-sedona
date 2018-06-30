@@ -546,18 +546,28 @@ ul.feature__list{
 }
 
 .footer__copyright{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
 	width: 33%;
 }
-.footer__copyright img{
-	padding-left: 10px;	
+.footer__copyright a{
+	padding-left: 10px;
+	display: block;
+}
+.footer__copyright svg{
+	width: 115px;
+	height: 40px;
+}
+.footer__copyright--link:hover path,
+.footer__copyright--link:hover rect{
+	fill: #81b3d2;
+} 
+.footer__copyright--link:active path,
+.footer__copyright--link:active rect{
+	fill: #bdbbbc;
 }
 /*********** Организуем футер над картой **************************/
 .bottombar{
