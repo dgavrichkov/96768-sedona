@@ -142,7 +142,7 @@ input[type="radio"].g--hidden{
 	line-height: 26px;
 	text-decoration: none;
 	display: block;
-	padding: 16px 0;
+	padding: 15px 0;
 }
 .intro__navigation a:hover{
 	color: #81b3d2;
@@ -166,7 +166,6 @@ input[type="radio"].g--hidden{
 	max-width: 1200px;
 	min-width: 768px;
 }
-.feature p,
 .feature ul{
 	margin: 0;
 	padding: 0;
@@ -180,8 +179,8 @@ input[type="radio"].g--hidden{
 	padding: 0;
 }
 .feature__desc{
-	padding-top: 64px;
-	padding-bottom: 55px;
+	padding-top: 60px;
+	padding-bottom: 52px;
 }
 .feature__desc b{
 	font-size: 21px;
@@ -191,8 +190,7 @@ input[type="radio"].g--hidden{
 .feature__desc p{
 	font-size: 14px;
 	line-height: 26px;
-
-	margin-top: 38px;
+	margin-top: 27px;
 }
 .feature__number::before{
 	content: '– ';
@@ -216,9 +214,46 @@ ul.feature__list{
 }
 .feature__list:last-child{
 	background-color: #eeeeee;
-
-	padding-bottom: 62px;
+	padding-bottom: 55px;
 }
+.feature__item{
+	width: 33%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.feature__item h4{
+	margin-bottom: 26px
+}
+.feature__list:last-child .feature__item p{
+	margin-top: 20px;
+}
+.feature__item--icon h4{
+	padding-top: 110px;
+	position: relative;
+	margin-bottom: 28px;
+}
+.feature__item--icon h4::before{
+	content: '';
+	position: absolute;
+  	top: 8px;
+  	left: 50%;
+  	width: 80px;
+  	height: 75px;
+  	margin-left: -40px;
+  	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 80px 75px;
+}
+.feature__item--home h4::before{
+	background-image: url(../img/icon-1.svg);
+}
+.feature__item--meal h4::before{
+	background-image: url(../img/icon-2.svg);
+}
+.feature__item--souvenir h4::before{
+	background-image: url(../img/icon-3.svg);
+}	
+
 .feature__wrapper{
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -227,7 +262,7 @@ ul.feature__list{
 	display: flex;
 	
 	/* заткнем проблему с загадочной разницей в высотах блоков. но при переполнении будет проблема */
-	max-height: 255px;
+	/*max-height: 255px;*/
 }
 .feature__illustration{
 	background-repeat: no-repeat;
@@ -250,55 +285,25 @@ ul.feature__list{
 	background-color: #81b3d2;
 	color: #ffffff;
 	width: 33%;
+	min-height: 146px;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 46px;
-	padding-bottom: 62px;
-
+	padding-bottom: 57px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 .feature__point h3{
 	margin-bottom: 26px;
 }
 .feature__point p{
-	margin-top: 26px;
+	margin-top: 20px;
 }
-.feature__item{
-	width: 33%;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.feature__item h4{
-	margin-bottom: 26px
-}
-.feature__item p{
-	margin-top: 26px;
-}
-.feature__item--icon h4{
-	padding-top: 102px;
-	position: relative;
-	margin-bottom: 28px;
-}
-.feature__item--icon h4::before{
-	content: '';
-	position: absolute;
-  	top: 0;
-  	left: 50%;
-  	width: 80px;
-  	height: 75px;
-  	margin-left: -40px;
-  	background-repeat: no-repeat;
-	background-position: 0 0;
-	background-size: 80px 75px;
-}
-.feature__item--home h4::before{
-	background-image: url(../img/icon-1.svg);
-}
-.feature__item--meal h4::before{
-	background-image: url(../img/icon-2.svg);
-}
-.feature__item--souvenir h4::before{
-	background-image: url(../img/icon-3.svg);
-}	
 
 /*********************** Поиск на главной ***************************/
 .search{
@@ -326,20 +331,20 @@ ul.feature__list{
 }
 .search__title p{
 	line-height: 24px;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 .search__button{
 	width: 570px;
 	font-size: 21px;
 	line-height: 26px;
 	text-align: center;
-	padding: 32px 0;
+	padding: 30px 0;
 }
 .search__form{
 	font-family: "PT Sans Bold", Arial, sans-serif;
 	box-sizing: border-box;
 	width: 570px;
-	padding: 55px;
+	padding: 56px 57px;
 	background-color: #ffffff;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -373,6 +378,7 @@ ul.feature__list{
 	border: none;
 	background: #f2f2f2;
 	height: 37px; 
+	text-transform: uppercase;
 }
 .search__form input:hover{
 	background-color: #ebebeb;
@@ -398,10 +404,11 @@ ul.feature__list{
 	width: 458px;
 	padding: 18px 0;
 	margin-top: 24px;
+	font-size: 21px;
+	line-height: 21px;
 }
 .order-form__field{
 	position: relative;
-
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -442,7 +449,6 @@ ul.feature__list{
 .order-form__field--kids .order-form__counter{
 	margin-left: 25px;
 }
-
 .order-form__calendar-icon{
 	width: 21px;
 	height: 22px;
@@ -627,8 +633,8 @@ ul.feature__list{
 	display: flex;
 	
 	box-sizing: border-box;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 27px;
+	padding-bottom: 27px;
 }
 .hotels-form__button{
 	display: block;
@@ -650,7 +656,7 @@ ul.feature__list{
 	padding: 0;
 }
 .hotels-form fieldset:not(:last-child){
-	margin-right: 110px;
+	margin-right: 117px;
 }
 .hotels-form fieldset:last-child{
 	margin-left: auto;
@@ -670,7 +676,7 @@ ul.feature__list{
 	padding-left: 38px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 .hotels-form__option:last-child{
 	margin-bottom: 0;
@@ -701,14 +707,18 @@ ul.feature__list{
 .hotels-form .hotels__column--1{
 	justify-content: flex-start;
 }
+
 /*  RANGE  */
 .range{
-	width: 330px;
+	width: 318px;
 	color: #ffffff;
+}
+.range legend{
+	margin-bottom: 10px;
 }
 .range__price-controls{
 	position: relative;
-	height: 36px;
+	height: 32px;
 	margin-bottom: 20px;
 	font-size: 0;
 	border: 2px solid #ffffff;
@@ -727,14 +737,14 @@ ul.feature__list{
 .range__price-controls label{
 	display: inline-block;
 	font-size: 14px;
-	line-height: 38px;
+	line-height: 32px;
 	vertical-align: top;
 	cursor: pointer;
 }
 .range__min-price,
 .range__max-price{
 	width: 90px;
-	padding-left: 65px;
+	padding-left: 60px;
 }
 .range__price-controls input{
 	width: 50px;
@@ -801,7 +811,9 @@ ul.feature__list{
 	align-items: center;
 }
 .filter__sort span{
-	margin-left: 50px;
+	margin-left: 46px;
+	font-size: 12px;
+	line-height: 12px;
 }
 .filter__sort ul{
 	margin-left: 40px;
@@ -904,7 +916,7 @@ ul.feature__list{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	width: 185px;
+	width: 180px;
 }
 .hotels__item-description div:nth-of-type(2){
 	display: flex;
@@ -956,7 +968,7 @@ ul.feature__list{
 	height: 17px;
 	background-image: url('../img/star.svg');
 	background-repeat: no-repeat;
-	margin-left: 5px;
+	margin-left: 8px;
 }
 
 /***********************/
