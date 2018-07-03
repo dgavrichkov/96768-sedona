@@ -125,13 +125,20 @@ input[type="radio"].g--hidden{
 .intro__navigation li:last-child{
 	padding-right: 6%;
 }
+/*немного спорное место*/
 .intro__navigation li:nth-child(2){
-	padding-right: 8%;
+	/*padding-right: 8%;*/
 }
+.intro__navigation li:nth-child(3){
+	margin-left: auto;
+}
+/***********************/
+
 .intro__navigation li:nth-child(2),
 .intro__navigation li:first-child{
 	text-align: left;
 }
+
 .intro__navigation li:nth-child(3),
 .intro__navigation li:last-child{
 	text-align: right;
@@ -646,6 +653,14 @@ ul.feature__list{
 	padding-top: 27px;
 	padding-bottom: 27px;
 }
+.hotels-form__group{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
 .hotels-form__button{
 	display: block;
 	font-family: "PT Sans", Arial, sans-serif;
@@ -665,8 +680,11 @@ ul.feature__list{
 	margin: 0;
 	padding: 0;
 }
-.hotels-form fieldset:not(:last-child){
+.hotels-form fieldset:first-child{
 	margin-right: 117px;
+}
+.hotels-form fieldset:nth-child(2){
+	margin-right: 80px;
 }
 .hotels-form fieldset:last-child{
 	margin-left: auto;
@@ -721,6 +739,7 @@ ul.feature__list{
 /*  RANGE  */
 .range{
 	width: 318px;
+	min-width: 220px;
 	color: #ffffff;
 }
 .range legend{
@@ -753,11 +772,11 @@ ul.feature__list{
 }
 .range__min-price,
 .range__max-price{
-	width: 90px;
-	padding-left: 60px;
+	width: 50%;
+	text-align: center;
 }
 .range__price-controls input{
-	width: 50px;
+	width: 30px;
 	margin: 0;
 	color: inherit;
 	font: inherit;
