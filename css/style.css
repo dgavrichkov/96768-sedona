@@ -27,6 +27,7 @@ body{
 	color: #ffffff;
 	border: 0;
 	outline: none;
+	cursor: pointer;
 }
 .common__button--light{
 	background-color: #81b3d2;
@@ -379,6 +380,7 @@ ul.feature__list{
 	background: #f2f2f2;
 	height: 37px; 
 	text-transform: uppercase;
+	cursor: pointer;
 }
 .search__form input:hover{
 	background-color: #ebebeb;
@@ -460,6 +462,7 @@ ul.feature__list{
 	background: transparent;
 	border: none;
 	outline: none;
+	cursor: pointer;
 }
 .order-form__calendar-icon path{
 	fill: #cacaca;
@@ -470,7 +473,6 @@ ul.feature__list{
 .order-form__calendar-icon:active path{
 	fill: #81b3d2;
 }
-
 
 .search__popup{
 	position: absolute;
