@@ -479,6 +479,7 @@ ul.feature__list{
 	/*visibility: hidden;*/
 	max-height: 0;
 	overflow: hidden;
+	transition: max-height 1s ease-out;
 }
 .search__popup--on{
 	/*display: flex;*/
@@ -486,6 +487,7 @@ ul.feature__list{
 	max-height: 560px;
 	transition: max-height 1s ease-out;
 }
+
 
 
 /*********************** Карта ***********************************/
