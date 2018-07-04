@@ -360,13 +360,6 @@ ul.feature__list{
 	display: flex;	
 	flex-wrap: wrap;
 }
-.search__popup{
-	position: absolute;
-	z-index: 1;
-}
-.search__popup--off{
-	display: none;
-}
 .search__form div{
 	width: 100%;
 }
@@ -477,6 +470,23 @@ ul.feature__list{
 .order-form__calendar-icon:active path{
 	fill: #81b3d2;
 }
+
+
+.search__popup{
+	position: absolute;
+	z-index: 1;
+	/*display: none;*/
+	/*visibility: hidden;*/
+	max-height: 0;
+	overflow: hidden;
+}
+.search__popup--on{
+	/*display: flex;*/
+	/*visibility: visible;*/
+	max-height: 560px;
+	transition: max-height 2s ease-out;
+}
+
 
 /*********************** Карта ***********************************/
 .map{
