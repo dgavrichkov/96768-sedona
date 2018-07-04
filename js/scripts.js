@@ -1,19 +1,28 @@
-// function toggleModal(){
-// 	var modal = document.getElementById('modal-form');
-// 	modal.classList.toggle('search__popup--off');
-// }
 
-document.querySelector('#modal-trigger')
-	.addEventListener('click', function(){
-		this.nextElementSibling
-			.classList.toggle('search__popup--on');
-	})
+var popup = document.querySelector('.search__popup');
+
+var trigger = document.querySelector('#modal-trigger');
+var form = document.querySelector('#order-form');
+var datein = popup.querySelector("[name=date-in");
+var dateoff = popup.querySelector("[name=date-off");
+var numadult = popup.querySelector("[name=adult-num");
+var numchild = popup.querySelector("[name=child-num");
 
 
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
-  };
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-}
+trigger.addEventListener('click', function(){
+	this.nextElementSibling.classList.toggle('search__popup--on');
+	popup.classList.remove('search__popup--error');
+})
+
+form.addEventListener('submit', function(evt){
+	if(!datein.value || !dateoff.value || !numadult.value || !numchild.value){
+		evt.preventDefault();
+		console.log("Заполните все поля");
+		popup.classList.add('search__popup--error')
+	}
+})
+
+
+
+
+

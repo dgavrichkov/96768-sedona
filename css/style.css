@@ -29,6 +29,9 @@ body{
 	outline: none;
 	cursor: pointer;
 }
+.common__button:focus{
+	outline: 1px solid #81b3d2;
+}
 .common__button--light{
 	background-color: #81b3d2;
 }
@@ -464,6 +467,9 @@ ul.feature__list{
 	outline: none;
 	cursor: pointer;
 }
+.order-form__calendar-icon:focus{
+	outline: 1px solid #81b3d2;
+}
 .order-form__calendar-icon path{
 	fill: #cacaca;
 }
@@ -477,17 +483,23 @@ ul.feature__list{
 .search__popup{
 	position: absolute;
 	z-index: 1;
-	/*display: none;*/
-	/*visibility: hidden;*/
+	box-shadow: 
+		3px 3px 6px 0 #ededed,
+		-3px 3px 6px 0 #ededed,
+		0px 3px 6px 0 #ededed;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 1s ease-out;
 }
 .search__popup--on{
-	/*display: flex;*/
-	/*visibility: visible;*/
 	max-height: 560px;
 	transition: max-height 1s ease-out;
+}
+.search__popup--error{
+	outline: 1px solid red;
+}
+.search__popup--error input{
+	outline: 1px solid red;
 }
 
 
