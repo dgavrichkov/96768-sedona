@@ -53,8 +53,14 @@ body{
 	color: #928a85;
 }
 .common__container{
-	
 	margin: 0 auto;
+}
+.common__wrapper{
+	box-shadow: 
+		2px 0 3px 0 #dbdbdb, 
+		-2px 0 3px 0 #dbdbdb;
+	margin: 0 auto;
+	max-width: 1200px;
 }
 /* сокрытые элементы */
 .g--hidden:not(:focus):not(:active),
@@ -122,6 +128,12 @@ input[type="radio"].g--hidden{
 }
 .intro__navigation li{
 	width: 20%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.intro__navigation li:nth-child(2),
+.intro__navigation li:first-child{
+	text-align: left;
 }
 .intro__navigation li:first-child{
 	padding-left: 6%;
@@ -136,13 +148,6 @@ input[type="radio"].g--hidden{
 .intro__navigation li:nth-child(3){
 	margin-left: auto;
 }
-/***********************/
-
-.intro__navigation li:nth-child(2),
-.intro__navigation li:first-child{
-	text-align: left;
-}
-
 .intro__navigation li:nth-child(3),
 .intro__navigation li:last-child{
 	text-align: right;
@@ -152,8 +157,6 @@ input[type="radio"].g--hidden{
 	font-size: 14px;
 	line-height: 26px;
 	text-decoration: none;
-	display: block;
-	padding: 15px 0;
 }
 .intro__navigation a:hover{
 	color: #81b3d2;
@@ -484,9 +487,9 @@ ul.feature__list{
 	position: absolute;
 	z-index: 1;
 	box-shadow: 
-		3px 3px 6px 0 #ededed,
-		-3px 3px 6px 0 #ededed,
-		0px 3px 6px 0 #ededed;
+		2px 2px 2px 0 #d9d5cd,
+		-2px 2px 2px 0 #d9d5cd,
+		0 2px 2px 0 #d9d5cd;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 1s ease-out;
