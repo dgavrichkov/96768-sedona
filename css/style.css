@@ -871,6 +871,7 @@ ul.feature__list{
 	width: 318px;
 	min-width: 220px;
 	color: #ffffff;
+	position: relative;
 }
 .range legend{
 	margin-bottom: 10px;
@@ -949,6 +950,12 @@ ul.feature__list{
 	height: 2px;
 	background: #ffffff;
 }
+.range__button{
+	width: 136px;
+	box-sizing: border-box;
+	position: absolute;
+	margin-left: -72px;
+}
 
 
 /* FILTER */
@@ -962,7 +969,6 @@ ul.feature__list{
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
 	justify-content: flex-start;
-	/*пока что*/
 	min-height: 86px;
 }
 
