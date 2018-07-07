@@ -954,6 +954,7 @@ ul.feature__list{
 	width: 136px;
 	box-sizing: border-box;
 	position: absolute;
+	left: 50%;
 	margin-left: -72px;
 }
 
