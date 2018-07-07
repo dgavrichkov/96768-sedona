@@ -51,9 +51,12 @@ body{
 	margin: 0 auto;
 }
 .common__wrapper{
+	-webkit-box-shadow: 
+	2px 0 3px 0 #dbdbdb, 
+	-2px 0 3px 0 #dbdbdb;
 	box-shadow: 
-		2px 0 3px 0 #dbdbdb, 
-		-2px 0 3px 0 #dbdbdb;
+	2px 0 3px 0 #dbdbdb, 
+	-2px 0 3px 0 #dbdbdb;
 	margin: 0 auto;
 	max-width: 1200px;
 }
@@ -68,6 +71,7 @@ input[type='radio'].g--hidden{
 	border: 0;
 	padding: 0;
 	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
@@ -77,14 +81,14 @@ input[type='radio'].g--hidden{
 /************************* Главное меню **************************/
 .intro{
 	background-image: 
-		url('../img/intro_border.png'),
-		url('../img/background.jpg');
+	url('../img/intro_border.png'),
+	url('../img/background.jpg');
 	background-repeat: 
-		no-repeat,
-		no-repeat;
+	no-repeat,
+	no-repeat;
 	background-position: 
-		bottom center,
-		top center;
+	bottom center,
+	top center;
 
 	max-width: 1200px;
 	min-width: 768px;
@@ -109,13 +113,16 @@ input[type='radio'].g--hidden{
 	list-style: none;
 	font-family: 'PT Sans Bold', Arial, sans-serif;
 	background-color: #ffffff;
-
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 
 	margin: 0;
@@ -191,7 +198,7 @@ input[type='radio'].g--hidden{
 .feature__desc{
 	background-color: #ffffff;
 	padding-top: 60px;
-	padding-bottom: 52px;
+	padding-bottom: 38px;
 }
 .feature__desc b{
 	font-size: 21px;
@@ -212,20 +219,20 @@ input[type='radio'].g--hidden{
 /*пошли строки*/
 ul.feature__list{
 	list-style: none;
-	
-	padding-top: 50px;
-	padding-bottom: 80px;
-
-	display: -webkit-flex;
+	padding-top: 48px;
+	padding-bottom: 65px;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-pack: distribute;
 	justify-content: space-around;
 }
 .feature__list:last-child{
 	background-color: #eeeeee;
-	padding-bottom: 55px;
+	padding-bottom: 40px;
 }
 .feature__item{
 	width: 33%;
@@ -246,12 +253,12 @@ ul.feature__list{
 .feature__item--icon h4::before{
 	content: '';
 	position: absolute;
-  	top: 8px;
-  	left: 50%;
-  	width: 80px;
-  	height: 75px;
-  	margin-left: -40px;
-  	background-repeat: no-repeat;
+	top: 8px;
+	left: 50%;
+	width: 80px;
+	height: 75px;
+	margin-left: -40px;
+	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 80px 75px;
 }
@@ -266,10 +273,11 @@ ul.feature__list{
 }	
 
 .feature__wrapper{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	
 	/* заткнем проблему с загадочной разницей в высотах блоков. но при переполнении будет проблема */
@@ -282,16 +290,17 @@ ul.feature__list{
 }
 .feature__wrapper:nth-of-type(1) .feature__illustration{
 	background-image: url('../img/features_1.jpg');
-	-webkit-background-size: 100% auto;
 	background-size: 100% auto;
 }
 .feature__wrapper:nth-of-type(2) .feature__illustration{
 	background-image: url('../img/features_2.jpg');
+	-webkit-box-ordinal-group: 0;
+	-ms-flex-order: -1;
 	order: -1;
-	-webkit-background-size: 100% auto;
 	background-size: 100% auto;
 }
 .feature__point{
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	background-color: #81b3d2;
 	color: #ffffff;
@@ -300,13 +309,19 @@ ul.feature__list{
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 46px;
-	padding-bottom: 57px;
-	display: -webkit-flex;
+	padding-bottom: 45px;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
 }
 .feature__point h3{
@@ -321,19 +336,27 @@ ul.feature__list{
 	background-color: #ffffff;
 	max-width: 1200px;
 	min-width: 768px;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
 	justify-content: flex-end;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 .search__title{
 	text-align: center;
 	padding-top: 55px;
-	padding-bottom: 48px;
+	padding-bottom: 35px;
 }
 .search__title b{
 	font-size: 30px;
@@ -355,15 +378,18 @@ ul.feature__list{
 }
 .search__form{
 	font-family: 'PT Sans Bold', Arial, sans-serif;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 570px;
 	padding: 56px 57px;
 	background-color: #ffffff;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;	
+	-ms-flex-wrap: wrap;	
 	flex-wrap: wrap;
 }
 .search__form div{
@@ -373,9 +399,13 @@ ul.feature__list{
 	width: 50%;
 }
 .search__form div:nth-child(3){
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 .search__form div:nth-child(4){
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
 	justify-content: flex-end;
 }
 .search__form input, 
@@ -392,6 +422,7 @@ ul.feature__list{
 }
 .search__form input:focus{
 	background-color: transparent;
+	-webkit-box-shadow: inset 0 0 0 1px #ebebeb;
 	box-shadow: inset 0 0 0 1px #ebebeb;
 }
 .search__control{
@@ -416,33 +447,46 @@ ul.feature__list{
 }
 .order-form__field{
 	position: relative;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	-ms-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	margin-bottom: 30px;
 }
 .order-form__field .order-form__counter{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
 	justify-content: flex-end;
 	width: 114px;
 }
 .order-form__counter button:nth-of-type(1){
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
 	order: 1;
 }
 .order-form__counter button:nth-of-type(2){
+	-webkit-box-ordinal-group: 4;
+	-ms-flex-order: 3;
 	order: 3;
 }
 .order-form__field--datein input,
 .order-form__field--dateoff input{
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 343px;
 	padding-left: 10px;
@@ -451,6 +495,8 @@ ul.feature__list{
 .order-form__field--kids input{
 	width: 40px;
 	text-align: center;
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
 	order: 2;
 }
 .order-form__field--kids .order-form__counter{
@@ -485,16 +531,24 @@ ul.feature__list{
 .search__popup{
 	position: absolute;
 	z-index: 1;
+	-webkit-box-shadow: 
+	2px 2px 2px 0 #d9d5cd,
+	-2px 2px 2px 0 #d9d5cd,
+	0 2px 2px 0 #d9d5cd;
 	box-shadow: 
-		2px 2px 2px 0 #d9d5cd,
-		-2px 2px 2px 0 #d9d5cd,
-		0 2px 2px 0 #d9d5cd;
+	2px 2px 2px 0 #d9d5cd,
+	-2px 2px 2px 0 #d9d5cd,
+	0 2px 2px 0 #d9d5cd;
 	max-height: 0;
 	overflow: hidden;
+	-webkit-transition: max-height 1s ease-out;
+	-o-transition: max-height 1s ease-out;
 	transition: max-height 1s ease-out;
 }
 .search__popup--on{
 	max-height: 560px;
+	-webkit-transition: max-height 1s ease-out;
+	-o-transition: max-height 1s ease-out;
 	transition: max-height 1s ease-out;
 }
 .search__popup--error{
@@ -510,10 +564,11 @@ ul.feature__list{
 .map{
 	max-width: 1200px;
 	min-width: 768px;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	/*фолбэк карты*/
 	background: url('../img/map.jpg') no-repeat;
@@ -535,15 +590,20 @@ ul.feature__list{
 	max-width: 1200px;
 	min-width: 768px;
 	min-height: 120px;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-pack: distribute;
 	justify-content: space-around;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;	
 }
-.footer p, ul{
+.footer p, 
+.footer ul{
 	padding: 0;
 	margin: 0;
 }
@@ -558,12 +618,17 @@ ul.feature__list{
 }
 .footer .footer__social{
 	list-style: none;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	padding: 36px 0;
 	width: 33%;
@@ -577,13 +642,18 @@ ul.feature__list{
 	margin-left: 6px;
 }
 .footer__social a{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	-ms-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	padding: 0;
 	width: 47px;
@@ -591,12 +661,17 @@ ul.feature__list{
 }
 
 .footer__copyright{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 
 	width: 33%;
@@ -646,7 +721,9 @@ ul.feature__list{
 	max-width: 1200px;
 	min-width: 768px;
 }
-.hotels ul, p, h2{
+.hotels ul, 
+.hotels p, 
+.hotels h2{
 	margin: 0;
 	padding: 0;
 }
@@ -658,16 +735,18 @@ ul.feature__list{
 }
 
 .hotels__column{
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
 	/*padding-left: 72px;
 	padding-right: 72px;*/
 	padding-left: 6%;
 	padding-right: 6%;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 .hotels__column--1{
@@ -685,22 +764,28 @@ ul.feature__list{
 	background-image: url('../img/filter_background.jpg');
 	background-repeat: no-repeat;
 	background-position: 0px -58px;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	
+	-webkit-box-sizing: border-box;
 	
 	box-sizing: border-box;
 	padding-top: 27px;
 	padding-bottom: 27px;
 }
 .hotels-form__group{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 .hotels-form__button{
@@ -760,6 +845,7 @@ ul.feature__list{
 .hotels-form__input + label::before{
 	content: '';
 	position: absolute;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 27px;
 	height: 23px;
@@ -775,6 +861,8 @@ ul.feature__list{
 	background: url('../img/checkbox-on.svg') no-repeat;
 }
 .hotels-form .hotels__column--1{
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
 }
 
@@ -803,6 +891,8 @@ ul.feature__list{
 	background-color: #ffffff;
 	top: 50%;
 	right: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 .range__price-controls label{
@@ -837,6 +927,7 @@ ul.feature__list{
 	background: #ababab;
 	border: 8px solid #ffffff;
 	border-radius: 50%;
+	-webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
 	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
 	cursor: pointer;
 }
@@ -862,11 +953,14 @@ ul.feature__list{
 
 /* FILTER */
 .filter{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
 	/*пока что*/
 	min-height: 86px;
@@ -875,25 +969,34 @@ ul.feature__list{
 
 .filter__list{
 	list-style: none;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 .filter__list li:not(:first-child){
 	margin-left: 33px;
 }
 .filter__sort{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 30px 0;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 .filter__sort span{
@@ -921,13 +1024,18 @@ ul.feature__list{
 	width: 36px;
 	padding: 0;
 	margin-left: auto;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 30px 0;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -951,10 +1059,11 @@ ul.feature__list{
 }
 
 .hotels__item{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 
 	padding-top: 30px;
@@ -965,12 +1074,18 @@ ul.feature__list{
 }
 
 .hotels__item-description{
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
 	margin-left: 30px;
 
@@ -985,33 +1100,37 @@ ul.feature__list{
 	line-height: 14px;
 }
 .hotels__item-description div:nth-of-type(1){
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	width: 180px;
 }
 .hotels__item-description div:nth-of-type(2){
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 258px;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin-top: auto;
 }
-.hotels__item-more{
-	/*margin-right: 5px;*/
-}
+
 .hotels__item-more,
 .hotels__item-order{
 	display: block;
 	padding: 8px 16px; 
-	/*min-height: 28px;*/
 	font-size: 14px;
 	line-height: 14px;
 }
@@ -1022,24 +1141,32 @@ ul.feature__list{
 
 .hotels__item-reputation{
 	margin-left: auto;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	-ms-align-items: flex-end;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
 	align-items: flex-end;
-	/*max-height: 90px;*/
 }
 
 .hotels-stars__list{
 	list-style: none;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 
 }
