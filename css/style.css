@@ -193,6 +193,7 @@ input[type="radio"].g--hidden{
 	padding: 0;
 }
 .feature__desc{
+	background-color: #ffffff;
 	padding-top: 60px;
 	padding-bottom: 52px;
 }
@@ -536,29 +537,28 @@ ul.feature__list{
 	max-width: 1200px;
 	min-width: 768px;
 	min-height: 120px;
-
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
+	
 }
 .footer p, ul{
 	padding: 0;
 	margin: 0;
 }
-.footer__tag{
+.footer .footer__tag{
 	font-family: "PT Sans Bold", Arial, sans-serif;
 	color: black;
 	font-size: 21px;
 	line-height: 26px;
 	text-align: center;
-
 	width: 33%;
+	padding: 50px 0;
 }
-.footer__social{
+.footer .footer__social{
 	list-style: none;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -566,10 +566,13 @@ ul.feature__list{
 	display: -o-flex;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	padding: 36px 0;
 	width: 33%;
 }
 .footer__social li{
-	
+	width: 47px;
+	height: 47px;
 }
 .footer__social li:nth-child(2){
 	margin-right: 6px;
@@ -590,7 +593,10 @@ ul.feature__list{
 }
 
 .footer__copyright{
-
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -866,24 +872,7 @@ ul.feature__list{
 	/*пока что*/
 	min-height: 86px;
 }
-.filter__sort{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-ms-align-items: center;
-	justify-content: flex-start;
-	align-items: center;
-}
-.filter__sort span{
-	margin-left: 46px;
-	font-size: 12px;
-	line-height: 12px;
-}
-.filter__sort ul{
-	margin-left: 40px;
-}
+
 
 .filter__list{
 	list-style: none;
@@ -897,6 +886,24 @@ ul.feature__list{
 }
 .filter__list li:not(:first-child){
 	margin-left: 33px;
+}
+.filter__sort{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 30px 0;
+	justify-content: flex-start;
+	align-items: center;
+}
+.filter__sort span{
+	margin-left: 46px;
+	font-size: 12px;
+	line-height: 12px;
+}
+.filter__sort ul{
+	margin-left: 40px;
 }
 .filter__control{
 	font-size: 12px;
@@ -921,7 +928,7 @@ ul.feature__list{
 	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
-	-ms-align-items: center;
+	padding: 30px 0;
 	align-items: center;
 }
 
@@ -979,12 +986,20 @@ ul.feature__list{
 	line-height: 14px;
 }
 .hotels__item-description div:nth-of-type(1){
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	width: 180px;
 }
 .hotels__item-description div:nth-of-type(2){
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
 	display: flex;
 	width: 258px;
 	justify-content: space-between;
