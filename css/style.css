@@ -80,6 +80,7 @@ input[type='radio'].g--hidden{
 
 /************************* Главное меню **************************/
 .intro{
+	background-color: #58646d;
 	background-image: 
 	url('../img/intro_border.png'),
 	url('../img/background.jpg');
@@ -284,6 +285,7 @@ ul.feature__list{
 	/*max-height: 255px;*/
 }
 .feature__illustration{
+	background-color: #81b3d2;
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 67%;	
@@ -571,6 +573,7 @@ ul.feature__list{
 	display: -ms-flexbox;
 	display: flex;
 	/*фолбэк карты*/
+	background-color: #f2f1ef;
 	background: url('../img/map.jpg') no-repeat;
 	min-height: 593px;
 }
@@ -738,8 +741,6 @@ ul.feature__list{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
-	/*padding-left: 72px;
-	padding-right: 72px;*/
 	padding-left: 6%;
 	padding-right: 6%;
 	display: -moz-flex;
@@ -760,7 +761,7 @@ ul.feature__list{
 
 /* Форма поиска */
 .hotels-form{
-	/* ИЗОБРАЖЕНИЕ ПЕРЕДЕЛАТЬ, несоотвествие макету */
+	background-color: #766357;
 	background-image: url('../img/filter_background.jpg');
 	background-repeat: no-repeat;
 	background-position: 0px -58px;
