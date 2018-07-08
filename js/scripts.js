@@ -9,7 +9,8 @@ var numadult = popup.querySelector('[name=adult-num]');
 var numchild = popup.querySelector('[name=child-num]');
 
 
-trigger.addEventListener('click', function(){
+trigger.addEventListener('click', function(evt){
+	evt.preventDefault();
 	this.nextElementSibling.classList.toggle('search__popup--on');
 	popup.classList.remove('search__popup--error');
 })
@@ -18,6 +19,8 @@ form.addEventListener('submit', function(evt){
 	if(!datein.value || !dateoff.value || !numadult.value || !numchild.value){
 		evt.preventDefault();
 		console.log('Заполните все поля');
+		popup.classList.remove('search__popup--error');
+      	popup.offsetWidth = popup.offsetWidth;
 		popup.classList.add('search__popup--error')
 	}
 })
