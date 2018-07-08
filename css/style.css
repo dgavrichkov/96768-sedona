@@ -952,7 +952,7 @@ ul.feature__list{
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
-.range__price-controls label{
+.range__price-container{
 	width: 50%;
 	font-size: 14px;
 	cursor: pointer;
@@ -966,10 +966,10 @@ ul.feature__list{
 	-ms-flex-align: center;
 	align-items: center;
 }
-.range__min-price .range__price-container{
+.range__price-container .range__min-price{
 	margin-left: 42%;
 }
-.range__max-price .range__price-container{
+.range__price-container .range__max-price{
 	margin-left: 35%;
 }
 .range__price-controls input{
