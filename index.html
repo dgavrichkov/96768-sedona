@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.min">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 	<!-- Заголовок -->
@@ -90,7 +90,6 @@
 				<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 			</div>
 			<div class="search__button-box">
-				<!-- <button class="search__button common__button common__button--dirt" id="modal-trigger" type="button">Поиск гостиницы в Седоне</button> -->
 				<a href="#" class="search__button common__button common__button--dirt" id="modal-trigger">Поиск гостиницы в Седоне</a>
 				<div class="search__popup search__popup--on" id="modal-form">		
 					<form class="search__form order-form" id="order-form" action="https://echo.htmlacademy.ru" method="post">
@@ -114,7 +113,6 @@
 							<label for="adult-num">Взрослые:</label>
 							<div class="order-form__counter">
 								<input id="adult-num" type="text" name="adult-num" placeholder="2">
-								<!-- на кнопки прикрутим скрипты -->
 								<button class="search__control" id="adult-reduce" type="button">-</button>
 								<button class="search__control" id="adult-increase" type="button">+</button>
 							</div>
@@ -185,6 +183,6 @@
 			</footer>
 		</div>
 	</div>
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.min.js"></script>
 </body>
 </html>

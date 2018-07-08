@@ -60,7 +60,6 @@ body{
 	margin: 0 auto;
 	max-width: 1200px;
 }
-/* сокрытые элементы */
 .g--hidden:not(:focus):not(:active),
 input[type='checkbox'].g--hidden,
 input[type='radio'].g--hidden{
@@ -125,7 +124,6 @@ input[type='radio'].g--hidden{
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-
 	margin: 0;
 	padding: 0;
 }
@@ -217,7 +215,6 @@ input[type='radio'].g--hidden{
 .feature__number::after{
 	content: ' –';
 }
-/*пошли строки*/
 ul.feature__list{
 	list-style: none;
 	padding-top: 48px;
@@ -280,9 +277,6 @@ ul.feature__list{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	
-	/* заткнем проблему с загадочной разницей в высотах блоков. но при переполнении будет проблема */
-	/*max-height: 255px;*/
 }
 .feature__illustration{
 	background-color: #81b3d2;
@@ -557,9 +551,10 @@ ul.feature__list{
 	-o-transition: max-height 1s ease-out;
 	transition: max-height 1s ease-out;
 }
-@keyframes shake {
+@-webkit-keyframes shake {
 	0%,
 	100% {
+		-webkit-transform: translateX(0);
 		transform: translateX(0);
 	}
 
@@ -568,6 +563,7 @@ ul.feature__list{
 	50%,
 	70%,
 	90% {
+		-webkit-transform: translateX(-10px);
 		transform: translateX(-10px);
 	}
 
@@ -575,10 +571,36 @@ ul.feature__list{
 	40%,
 	60%,
 	80% {
+		-webkit-transform: translateX(10px);
+		transform: translateX(10px);
+	}
+}
+@keyframes shake {
+	0%,
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		-webkit-transform: translateX(-10px);
+		transform: translateX(-10px);
+	}
+
+	20%,
+	40%,
+	60%,
+	80% {
+		-webkit-transform: translateX(10px);
 		transform: translateX(10px);
 	}
 }
 .search__popup--error{
+	-webkit-animation: shake 0.6s;
 	animation: shake 0.6s;
 }
 .search__popup--error input{
@@ -615,7 +637,6 @@ ul.feature__list{
 /*********************** Подвал **********************************/
 .footer{
 	background-color: #ffffff;
-
 	max-width: 1200px;
 	min-width: 768px;
 	min-height: 120px;
@@ -737,11 +758,10 @@ ul.feature__list{
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	
 	opacity: 0.9;
 }
 
-/**************************************************************************************************************************************************************************************************************************/
+
 /********************* Страница каталога *************************/
 .inner-page .intro{
 	background-image: none;
@@ -797,9 +817,7 @@ ul.feature__list{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	
-	-webkit-box-sizing: border-box;
-	
+	-webkit-box-sizing: border-box;	
 	box-sizing: border-box;
 	padding-top: 27px;
 	padding-bottom: 27px;
@@ -1005,7 +1023,6 @@ ul.feature__list{
 	margin-left: -72px;
 }
 
-
 /* FILTER */
 .filter{
 	display: -moz-flex;
@@ -1019,8 +1036,6 @@ ul.feature__list{
 	justify-content: flex-start;
 	min-height: 86px;
 }
-
-
 .filter__list{
 	list-style: none;
 	display: -moz-flex;
@@ -1119,7 +1134,6 @@ ul.feature__list{
 	font-size: 21px;
 	line-height: 26px;
 }
-
 .hotels__item{
 	display: -moz-flex;
 	display: -ms-flex;
@@ -1127,7 +1141,6 @@ ul.feature__list{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
@@ -1150,7 +1163,6 @@ ul.feature__list{
 	-ms-flex-pack: start;
 	justify-content: flex-start;
 	margin-left: 30px;
-
 }
 .hotels__item-name{
 	color: #000000;
@@ -1252,10 +1264,6 @@ ul.feature__list{
 	background-repeat: no-repeat;
 	margin-left: 8px;
 }
-
-/***********************/
-
-
 .hotels__filter,
 .hotels__item{
 	border-bottom: 1px solid #e5e5e5;
