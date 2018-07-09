@@ -176,6 +176,7 @@ input[type='radio'].g--hidden{
 
 /*************************** Главная часть **************************/
 .feature{
+	display: block;
 	text-align: center;
 	background-color: #ffffff;
 
@@ -195,7 +196,6 @@ input[type='radio'].g--hidden{
 	padding: 0;
 }
 .feature__desc{
-	background-color: #ffffff;
 	padding-top: 60px;
 	padding-bottom: 38px;
 }
@@ -737,6 +737,7 @@ ul.feature__list{
 .footer__copyright svg{
 	width: 115px;
 	height: 40px;
+	overflow: hidden;
 }
 .footer__copyright--link:hover path,
 .footer__copyright--link:hover rect{
@@ -771,8 +772,8 @@ ul.feature__list{
 	outline: 2px solid #81b3d2;
 }
 .hotels{
+	display: block;
 	background-color: #ffffff;
-
 	max-width: 1200px;
 	min-width: 768px;
 }
@@ -1267,4 +1268,4 @@ ul.feature__list{
 .hotels__filter,
 .hotels__item{
 	border-bottom: 1px solid #e5e5e5;
-}
+}}
